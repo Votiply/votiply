@@ -13,13 +13,14 @@ contract Proposal is Ownable {
         uint256 _yesCount;
         uint256 _noCount;
     }
-    ProposalDetails proposalDetails;
+
+    ProposalDetails proposal;
 
     constructor(string memory _decision) {
-        proposalDetails._decision = _decision;
-        proposalDetails._creator = msg.sender;
-        proposalDetails._yesCount = 0;
-        proposalDetails._noCount = 0;
+        proposal._decision = _decision;
+        proposal._creator = msg.sender;
+        proposal._yesCount = 0;
+        proposal._noCount = 0;
     }
 
     function getProposal()
@@ -31,4 +32,4 @@ contract Proposal is Ownable {
         _decision = proposalDetails._decision;
         return _decision;
     }
-}
+   
