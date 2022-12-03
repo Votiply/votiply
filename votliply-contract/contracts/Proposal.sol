@@ -32,4 +32,4 @@ contract Proposal is Ownable {
         _decision = proposalDetails._decision;
         return _decision;
     }
-   
+}
